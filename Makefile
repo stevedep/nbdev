@@ -16,6 +16,12 @@ docs: $(SRC)
 	nbdev_build_docs
 	touch docs
 
+gitm: 
+	git add --all
+	git commit -m "$(commitmessage)"
+	git push -u origin master
+
+
 test:
 	nbdev_test_nbs --flags ''
 
